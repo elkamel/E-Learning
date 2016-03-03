@@ -1,10 +1,41 @@
-<div id="loginPage">
+ 
+<div class="wrapper"  >
+	<div class="background"></div>
+	<div class="auth opa">
+		<div class="image-size">
+			<img src="images/logo.png" class="authLogo">
+		</div>
+		<div class="login-title">
+			<h3>Welcome Back!</h3>
+		</div>
+		<div id="login"  ng-controller="loginController">
+		<div class="inputWrapper">
+			<div class="user-icon">
+				<i class="fa fa-user fa-fw"></i>
+			</div>
+			<input type="text" class="username" ng-model="user.name" placeholder="Enter your username" required/>
+			<div class="user-icon">
+				<i class="fa fa-key fa-fw"></i>
+			</div>
+			<input type="password" class="password"
+				placeholder="Enter your password"  ng-model="user.pass" required/>
+			<button type="submit" class="btn btn-login" value="Login" ng-click="login()">Login</button>
+			<div class="forget">
+				<p>
+					Not a member?  <span><a href="#" ng-click="goToSignUpPage()">Sign up</a></span>
+				</p>
+			</div>
+		</div>
+	</div>
+
+</div>
+<!--  <div id="loginPage">
 	<div class="logoContainer">
 		<img src="images/logo.png" class="logo">
 	</div>
 	<div class="container">
 		<div id="login"  ng-controller="loginController">
-			<form method="post">
+			 <form>
 				<fieldset class="clearfix">
 					<p>
 						<span class="fontawesome-user"></span><input type="text"
@@ -12,20 +43,20 @@
 							onBlur="if(this.value == '') this.value = 'Username'"
 							onFocus="if(this.value == 'Username') this.value = ''" required>
 					</p>
-					<!-- JS because of IE support; better: placeholder="Username" -->
+					 
 					<p>
 						<span class="fontawesome-lock"></span><input type="password"
 							value="Password" ng-model="user.pass"
 							onBlur="if(this.value == '') this.value = 'Password'"
 							onFocus="if(this.value == 'Password') this.value = ''" required>
 					</p>
-					<!-- JS because of IE support; better: placeholder="Password" -->
+					 
 					<p>
 						<input type="submit" value="Sign In" id="loginBtn"
 							ng-click="login();">
 					</p>
 				</fieldset>
-			</form>
+			 </form>
 			<p>
 				Not a member? <a href="#" class="blue" id="signUpBtn" ng-click="goToSignUpPage()">Sign up
 					now</a><span class="fontawesome-arrow-right"></span>
@@ -33,6 +64,7 @@
 		 
  		   
 		</div>
-		<!-- end login -->
+	 
 	</div>
 </div>
+-->

@@ -1,3 +1,36 @@
-<div class="logoContainer">
-		<img src="images/logo.png" class="logo">
+<div class="signupPage">
+<div class="wrapper"  >
+	<div class="background"></div>
+	<div class="auth opa">
+		<div class="image-size">
+			<img src="images/logo.png" class="authLogo">
+		</div>
+		<div class="login-title">
+			<h3>Sign Up!</h3>
+		 </div>
+		<div id="login"  ng-controller="loginController">
+		<div class="inputWrapper">
+			 <input type="text" class="username" ng-model="user.name" placeholder="Enter your username" required/>
+			 <input type="password" class="password" placeholder="Enter your password"  ng-model="user.pass" required/>
+			 <input type="password" class="password" placeholder="Confirm your password"  ng-model="user.passConf" required/>
+			 <input type="text"  class="username" placeholder="First name"  ng-model="user.name" required/>
+			 <input type="text"  class="username" placeholder="Last name"  ng-model="user.lastname" required/>
+			 <input type="email"  class="username" placeholder="E-mail"  ng-model="user.email" required/>
+			 <input type="phone"  class="username" placeholder="Phone"  ng-model="user.phone" />
+			 <input placeholder="Date of Birth" class="username" type="text" onfocus="(this.type='date')"  ng-model="user.birth" id="date"> 
+			 <select class="gender"  ng-model="user.gender">
+			   <option value="" disabled selected>Select your gender</option>
+			   <option value="male">Male</option>
+			   <option value="female">Female</option>
+			</select>
+			<button type="submit" class="btn btn-login" value="Login" ng-click="signUp()">Sign Up</button>
+			<div class="forget">
+				<p>
+					 
+				</p>
+			</div>
+		</div>
 	</div>
+
+</div> 
+</div>
